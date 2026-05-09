@@ -284,7 +284,8 @@ or just double‑click `super_mario.exe` in Explorer.
 
 - **Course:** CSE1200 — Structured Programming
 
-- **Group:** 3
+- **Group:** 3 Taufiq E Elahi(250221)
+- **Dedicated to** Late Hasina(Grandmother of Taufiq E Elahi)
 
 - **Engine library:** [Raylib](https://www.raylib.com/) by Ramon Santamaria
 
