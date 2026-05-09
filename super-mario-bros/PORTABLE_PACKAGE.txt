@@ -1,0 +1,63 @@
+================================================================
+  SUPER MARIO BROS - ENHANCED EDITION
+  Portable Distribution Notes
+================================================================
+
+This file explains what to ship to end-users so they can play
+the game without installing anything (no compiler, no Raylib).
+
+----------------------------------------------------------------
+  FILES TO INCLUDE IN A RELEASE PACKAGE (Windows)
+----------------------------------------------------------------
+
+  super_mario.exe       <-- the compiled game
+  README.txt            <-- short user-facing instructions
+  raylib.dll            <-- ONLY if you compiled with the
+                            shared (DLL) version of Raylib
+
+  (Optional)
+  savegame.dat          <-- DO NOT ship this; it's user data,
+                            generated automatically on first save.
+
+----------------------------------------------------------------
+  STATIC vs SHARED RAYLIB
+----------------------------------------------------------------
+
+  - STATIC build (recommended for distribution):
+      Compile against the static raylib library (libraylib.a).
+      The whole engine gets baked into super_mario.exe, so users
+      need NO extra DLLs.  This is the simplest approach.
+
+  - SHARED build:
+      Compile against raylib.dll.  The exe is smaller, but you
+      MUST ship raylib.dll alongside it in the same folder.
+
+  Most pre-built Raylib installers on Windows give you static
+  by default, so the simple `make` command produces a single
+  super_mario.exe that runs anywhere.
+
+----------------------------------------------------------------
+  TYPICAL RELEASE LAYOUT (zipped)
+----------------------------------------------------------------
+
+  SuperMarioBros-v1.0-Windows.zip
+   |
+   +-- super_mario.exe
+   +-- raylib.dll          (only if shared build)
+   +-- README.txt          (1-page user guide)
+   +-- LICENSE.txt
+
+  Users just unzip and double-click super_mario.exe.
+  A savegame.dat will be created next to the exe on first save.
+
+----------------------------------------------------------------
+  TESTING BEFORE RELEASE
+----------------------------------------------------------------
+
+  1. Move the exe to a fresh folder (no source / build files).
+  2. Double-click it on a Windows machine WITHOUT a compiler.
+  3. Verify: menu music plays, all 3 levels load, save (F5) works.
+  4. If a "missing DLL" error pops up, you have a shared build
+     and need to include the named DLL alongside the exe.
+
+================================================================
