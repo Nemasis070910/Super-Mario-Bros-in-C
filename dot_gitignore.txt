@@ -1,0 +1,52 @@
+# ============================================================
+#  .gitignore for Super Mario Bros — Enhanced Edition
+#  This file tells Git which files to IGNORE (never upload).
+#  Without it, you'd accidentally upload binary files,
+#  IDE clutter, and generated junk every time.
+# ============================================================
+
+# -------- Compiled binaries / object files --------
+*.exe
+*.o
+*.obj
+*.out
+*.app
+super_mario
+super_mario.exe
+
+# -------- Save data / runtime files --------
+savegame.dat
+
+# -------- Code::Blocks IDE files --------
+*.cbp
+*.layout
+*.depend
+*.workspace
+*.bmarks
+*.history
+bin/
+obj/
+
+# -------- Visual Studio Code --------
+.vscode/
+
+# -------- JetBrains IDEs (CLion, etc.) --------
+.idea/
+cmake-build-*/
+
+# -------- General build / temp folders --------
+build/
+out/
+
+# -------- OS junk --------
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+*.swo
+
+# -------- Backup / archive files --------
+*.bak
+*.tmp
+*.zip.bak
